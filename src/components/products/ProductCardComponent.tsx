@@ -20,14 +20,14 @@ num?: number;
  category?: string,
 }
 
-const ProductCardComponent = ({images,title, description, price}:ProductResponse) => {
+const ProductCardComponent = ({images,title, description, price, href}:ProductResponse & {href?: string}) => {
 
   const PLACEHOLDER = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSHQ2QS9U-YKh9fPiHsVWMcXMFKbZXlPQ_BpGCWYDTbjkaaakSgu-PZIJU&s=10"
   const imageSrc = images && images.length > 0 && images[0] ? images[0] : PLACEHOLDER;
 
   return (
     <a
-      href={''}
+      href={href ?? ''}
       className={cn(
         "block max-w-md transition-opacity hover:opacity-80"
       )}

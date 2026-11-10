@@ -80,6 +80,7 @@ export default function RecommandationCategories({ category, excludeId }: Props)
         {products.map((pro) => (
           <ProductCardComponent
             key={String(pro.id ?? pro.title)}
+            href={`/products/${String(pro.id)}`}
             images={pro.images}
             title={pro.title}
             description={pro.description}
