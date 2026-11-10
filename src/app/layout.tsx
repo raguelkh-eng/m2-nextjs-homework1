@@ -3,6 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavbarComponent } from "@/components/layout/navbar/NavbarComponent";
 import { Suspense } from "react";
+import localFont from "next/font/local";
+
+const googleSans = localFont({
+  src: "../font/Google_Sans (2)/static/GoogleSans-MediumItalic.ttf",
+});
 
 
 const geistSans = Geist({
@@ -26,10 +31,7 @@ export default function RootLayout(
   modal: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${googleSans.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
        {/* call navbar component */}
        <Suspense fallback={<h1 className="text-9xl text-center">Loading...</h1>}>

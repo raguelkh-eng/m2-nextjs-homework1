@@ -163,15 +163,9 @@ export default function DashboardLayout(
   {
     className,
     children,
-    users,
-    team,
-    products
   }: {
-    className: SidebarComponentProps,
+    className?: string,
     children: React.ReactNode,
-    users: React.ReactNode,
-    team: React.ReactNode,
-    products: React.ReactNode
   }) {
   return (
     <SidebarProvider className={cn(className)}>
@@ -197,9 +191,6 @@ export default function DashboardLayout(
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 ">
           {/* <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" /> */}
-          {products}
-          {team}
-          {users}
           {children}
         </div>
       </SidebarInset>

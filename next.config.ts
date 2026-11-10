@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  cacheComponents: true,
   // partialPrefetching: true,
   turbopack: {
     rules: {
@@ -25,7 +24,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'encrypted-tbn0.gstatic.com',
+        hostname: 'i.pinimg.com',
       }
     ]
   }

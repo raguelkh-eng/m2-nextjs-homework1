@@ -16,7 +16,8 @@ num?: number;
  images: string[],
  title: string,
  description: string,
- price: number
+ price: number,
+ category?: string,
 }
 
 const ProductCardComponent = ({images,title, description, price}:ProductResponse) => {

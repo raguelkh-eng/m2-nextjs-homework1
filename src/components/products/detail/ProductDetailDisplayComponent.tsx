@@ -1,16 +1,14 @@
 'use client'
 
-import { use } from "react"
 import { ProductResponse } from "../ProductCardComponent"
 import { ProductCardDetailComponent } from "./ProductDetailComponent";
 
 export default function ProductDetailDisplayComponent({
   product
 }: {
-  product: Promise<ProductResponse>
+  product: ProductResponse
 }) {
-
-  const { images, title, description, price } = use(product);
+  const { images, title, description, price } = product;
   // console.log("Images ", images)
   return (
     <ProductCardDetailComponent

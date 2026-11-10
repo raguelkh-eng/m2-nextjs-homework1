@@ -3,10 +3,10 @@
 // support with HTTP method
 // GET, POST, PUT,PATCH, DELETE, UPDATE, OPTION, HEADER
 
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 // NextResponse, NextRequest 
 
-export function GET(req:NextResponse){
+export function GET(req:NextRequest){
   
   const cookies = req.cookies.get('koko-secret');
   const person = {
